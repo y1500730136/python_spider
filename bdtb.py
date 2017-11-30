@@ -6,7 +6,7 @@ import re
 
 class BDTB:
 
-    def __init__(self, baseUrl, seeLZ, floorTag):
+    def __init__(self, baseUrl, seeLZ):
         self.base_url = baseUrl
         self.default_title = "百度贴吧"
         self.file = None
@@ -14,7 +14,6 @@ class BDTB:
         self.page_index = 1
         self.content_num = 1
         self.floor = 1
-        self.floorTag = floorTag
         self.defaultTitle = "百度贴吧"
 
     def getPage(self, pageNum):
@@ -101,6 +100,5 @@ class BDTB:
 
 baseUrl = "http://tieba.baidu.com/p/5435414830"
 seeLZ = 1
-floorTag = 1
-bdtb = BDTB(baseUrl, seeLZ, floorTag)
+bdtb = BDTB(baseUrl, seeLZ)
 bdtb.start()
